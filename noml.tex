@@ -1,0 +1,63 @@
+\documentclass [11pt]{book}
+
+% packages
+\usepackage{amsbsy}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage {bookmark}
+\usepackage {color}
+\usepackage{enumitem}
+\usepackage {graphicx}
+\usepackage {hyperref}
+\usepackage {libertine}
+\usepackage{listings}
+\usepackage[parfill]{parskip}
+\usepackage {xcolor}
+
+%configurations
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\hypersetup{colorlinks,urlcolor=blue}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+%alias
+
+
+\title {Notes of Machine Learning}
+\author {Kai Zhao}
+\date {\today}
+
+\begin {document}
+
+\maketitle
+
+\tableofcontents
+
+%part 1
+
+\part {Supervised Learning}
+
+%chapter 1
+\chapter {Linear Regression}
+
+\include {linear_regression/matrix_derivatives}
+
+\end {document}

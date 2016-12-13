@@ -1,0 +1,55 @@
+\section {Matrix Derivatives}
+
+\subsection{trace fact}
+
+\subsubsection {1. $trAB = trBA$}
+
+\textbf{proof:}
+
+Let $A$ be a m-by-n matrix, let $B$ be a n-by-m matrix.
+
+\begin{equation}
+trAB = \sum_{i=1}^{m} (AB)_{ii} = \sum_{i=1}^{m} (\sum_{j=1}^{n} A_{ij}B_{ji})
+\end{equation}
+
+\begin{equation}
+trBA = \sum_{i=1}^{n} (BA)_{ii} = \sum_{i=1}^{n} (\sum_{j=1}^{m} B_{ij}A_{ji})
+\end{equation}
+
+\begin{equation}
+\begin{split}
+trBA &= \sum_{i=1}^{n} (\sum_{j=1}^{m} B_{ij}A_{ji}) \\
+&= \sum_{j=1}^{m} (\sum_{i=1}^{n} B_{ij}A_{ji}) \\
+&= \sum_{j=1}^{m} (\sum_{i=1}^{n} A_{ji}B_{ij}) \\
+&= \sum_{i=1}^{m} (\sum_{j=1}^{n} A_{ij}B_{ji}) \\
+&= trAB
+\end{split}
+\end{equation}
+
+\subsubsection {2. $\nabla_A trAB = B^T$}
+
+\textbf{proof:}
+
+Let $A$ be a m-by-n matrix, let $B$ be a n-by-m matrix.
+
+\begin{equation}
+\begin{split}
+  \nabla_A trAB &=
+  \begin{bmatrix}
+    \dfrac{trAB}{\partial A_{11}} ... \dfrac{trAB}{\partial A_{1n}}\\
+    . .   .\\
+    .  .  .\\
+    .   . .\\
+    \dfrac{trAB}{\partial A_{m1}} ... \dfrac{trAB}{\partial A_{mn}}
+  \end{bmatrix} \\
+  &=
+  \begin{bmatrix}
+    B_{11} ... B_{n1}\\
+    . .   .\\
+    .  .  .\\
+    .   . .\\
+    B_{1m} ... B_{nm}
+  \end{bmatrix} \\
+  &= B^T
+\end{split}
+\end{equation}
