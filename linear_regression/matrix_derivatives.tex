@@ -54,3 +54,44 @@ Let $A$ be a m-by-n matrix, let $B$ be a n-by-m matrix.
 \end{split}
 \end{equation}
 
+\subsubsection {3. $\nabla_{A^{T}}f(A) = (\nabla_{A}f(A))^T$}
+
+\textbf{proof:}
+
+Let $A$ be a m-by-n matrix.
+
+\begin{equation}
+\begin{split}
+  \nabla_{A^{T}}f(A) =
+  \begin{bmatrix}
+    \dfrac{\partial f(A)}{\partial A_{11}} ... \dfrac{\partial f(A)}{\partial A_{m1}} \\
+    . .   .\\
+    .  .  .\\
+    .   . .\\
+    \dfrac{\partial f(A)}{\partial A_{1n}} ... \dfrac{\partial f(A)}{\partial A_{mn}}
+  \end{bmatrix} \\
+\end{split}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+  (\nabla_{A}f(A))^{T} &=
+  \begin{bmatrix}
+    \dfrac{\partial f(A)}{\partial A_{11}} ... \dfrac{\partial f(A)}{\partial A_{1n}} \\
+    . .   .\\
+    .  .  .\\
+    .   . .\\
+    \dfrac{\partial f(A)}{\partial A_{m1}} ... \dfrac{\partial f(A)}{\partial A_{mn}} \\
+  \end{bmatrix}^{T} \\
+    &=
+  \begin{bmatrix}
+    \dfrac{\partial f(A)}{\partial A_{11}} ... \dfrac{\partial f(A)}{\partial A_{m1}} \\
+    . .   .\\
+    .  .  .\\
+    .   . .\\
+    \dfrac{\partial f(A)}{\partial A_{1n}} ... \dfrac{\partial f(A)}{\partial A_{mn}} \\
+  \end{bmatrix} \\
+  &=
+  \nabla_{A^{T}}f(A)
+\end{split}
+\end{equation}
